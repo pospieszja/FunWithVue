@@ -3,3 +3,13 @@ html {
     display: block;
     margin: 0 auto;
 }
+
+h1 {
+    font-family: 'Gloria Hallelujah';
+    font-size: 75px;
+}
+
+li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+}

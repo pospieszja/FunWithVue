@@ -12,14 +12,29 @@
 </head>
 
 <body>
-    <h1>List of your ToDo</h1>
-    <div id="app">
-        <ul>
-            <li v-for="todo in todos">{{ todo.text}}</li>
-        </ul>
+    <div class="container">
+        <h1>List of your ToDo</h1>
+        <div id="app">
+            <div class="input-group">
+                <input type="text" class="form-control" name="" value="" placeholder="enter new todo" v-model="text">
+                <span class="input-group-btn">
+                    <button v-on:click="addItem" type="button" class="btn btn-success">Add</button>
+                </span>
+            </div>
+
+            <ul class="list-group">
+                <li v-for="todo in todos" class="list-group-item clearfix">
+                    {{ todo.text }}
+                    <span class="pull-right">
+                    <button type="button" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-trash"></span></button>
+                    </span>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 <!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
 <script src="https://unpkg.com/vue"></script>

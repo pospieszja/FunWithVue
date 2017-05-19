@@ -16,7 +16,7 @@
         <h1>List of your ToDo</h1>
         <div id="app">
             <div class="input-group">
-                <input type="text" class="form-control" name="" value="" placeholder="enter new todo" v-model="text">
+                <input v-model="text" type="text" class="form-control" name="" value="" placeholder="enter new todo">
                 <span class="input-group-btn">
                     <button v-on:click="addItem" type="button" class="btn btn-success">Add</button>
                 </span>
@@ -26,7 +26,7 @@
                 <li v-for="todo in todos" class="list-group-item clearfix">
                     {{ todo.text }}
                     <span class="pull-right">
-                    <button type="button" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-trash"></span></button>
+                    <button v-on:click="removeItem(todo)" type="button" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-trash"></span></button>
                     </span>
                 </li>
             </ul>

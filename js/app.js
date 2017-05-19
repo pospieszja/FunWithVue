@@ -30,6 +30,10 @@ var app = new Vue({
         })
         this.text = ''
       }
+    },
+    removeItem: function (todo) {
+      var index = this.todos.indexOf(todo)
+      this.todos.splice(index, 1)
     }
   }
 })

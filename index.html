@@ -16,7 +16,7 @@
         <h1>List of your ToDo</h1>
         <div id="app">
             <div class="input-group">
-                <input v-model="text" type="text" class="form-control" name="" value="" placeholder="enter new todo">
+                <input v-on:keyup.enter="addItem" v-model="text" type="text" class="form-control" name="" value="" placeholder="enter new todo">
                 <span class="input-group-btn">
                     <button v-on:click="addItem" type="button" class="btn btn-success">Add</button>
                 </span>
